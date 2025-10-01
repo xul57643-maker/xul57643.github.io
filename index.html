@@ -144,6 +144,20 @@
             height: 100%;
         }
 
+        /* 加载状态指示器 */
+        .loading-indicator {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 9999;
+            display: none;
+        }
+
         /* 响应式调整 */
         @media (max-width: 768px) {
             .main-title {
@@ -163,8 +177,14 @@
             }
         }
     </style>
-    <script type="module" crossorigin src="./assets/index-7326e954.js"></script>
-    <link rel="stylesheet" href="./assets/index-52a967b4.css">
+    
+    <!-- 添加加载状态指示器 -->
+    <div class="loading-indicator" id="loadingIndicator">
+        加载中，请稍候...
+    </div>
+    
+    <!-- 安全加载CSS -->
+    <link rel="stylesheet" href="./assets/index-52a967b4.css" onerror="console.warn('CSS加载失败，但页面仍可运行')">
 </head>
 <body>
     <!-- 背景模糊 -->
@@ -189,8 +209,18 @@
     <div id="root"></div>
 
     <script>
+        // 全局错误处理
+        window.addEventListener('error', function(e) {
+            console.warn('捕获到全局错误:', e.message, e.filename);
+            // 可以在这里添加错误上报逻辑
+        });
+
         // 修复后的初始化代码
         (function() {
+            // 显示加载指示器
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            loadingIndicator.style.display = 'block';
+            
             // 检测iOS设备 - 更可靠的检测方法
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
             
@@ -277,10 +307,43 @@
                 }
             }
             
+            // 安全加载主脚本
+            function loadMainScript() {
+                return new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    script.type = 'module';
+                    script.crossOrigin = 'anonymous';
+                    script.src = './assets/index-7326e954.js';
+                    
+                    script.onload = function() {
+                        console.log('主脚本加载成功');
+                        loadingIndicator.style.display = 'none';
+                        resolve();
+                    };
+                    
+                    script.onerror = function(e) {
+                        console.warn('主脚本加载失败:', e);
+                        loadingIndicator.textContent = '资源加载失败，点击屏幕重试';
+                        loadingIndicator.style.cursor = 'pointer';
+                        loadingIndicator.onclick = function() {
+                            window.location.reload();
+                        };
+                        reject(new Error('主脚本加载失败'));
+                    };
+                    
+                    document.head.appendChild(script);
+                });
+            }
+            
             // 页面加载完成后初始化
             window.addEventListener('load', function() {
                 adjustLayout();
                 initEvents();
+                
+                // 尝试加载主脚本
+                loadMainScript().catch(e => {
+                    console.warn('主脚本加载失败，但页面基本功能仍可用:', e);
+                });
                 
                 // 初始化Service Worker
                 if ('serviceWorker' in navigator && !isIOS) {
