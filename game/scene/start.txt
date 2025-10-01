@@ -1,0 +1,8 @@
+; 初始场景，以及特效演示
+intro:免责声明，本故事禁止用作商业用途，禁止二改。一切故事都是虚构，勿上升现实。 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+intro:默认piazhou99，大量私设，能接受继续点下去。 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+intro:中秋快乐，欢迎进入piazhou的同人世界 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeBg:45ec5a2941bade0124ea53151f5d8cb0.jpg -transform={"scale":{"x":0.7,"y":0.7}};
+choose:魔法月饼:魔法月饼.txt;
+; 模版修改演示
+setTextbox:hide;
