@@ -1,7 +1,0 @@
-Game_name:piazhou中秋小剧场;
-Game_key:a803d6099dc7fb;
-Title_img:微信图片_2025-08-30_094026_682.jpg;
-Title_bgm:s_Title.mp3;
-Textbox_theme:imss;
-Package_name:piazhou中秋小剧场;
-Description:;

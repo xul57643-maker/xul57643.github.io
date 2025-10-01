@@ -1,3 +1,0 @@
-
-intro:太可惜了Oscar，你们就要捅破这层窗户纸了.....下次勇敢的说出自己内心真正的想法吧，说不定有意外收获 -hold -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
-end;

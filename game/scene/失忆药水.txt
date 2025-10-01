@@ -1,9 +1,0 @@
-
-changeBg:0bc30dabd1d89bb307a65db689172386.jpg -transform={"scale":{"x":0.8,"y":0.8}};
-:天哪这是失忆药水！由于长得和迷情剂一模一样Oscar拿错了，Oscar你也太不小心了，这可怎么办.....;
-changeBg:e230b27678c4918f7f26c03de44314a9.jpg;
-:他们窝在沙发上一起看了会电视，Oscar看起来心思完全不在电视上，非常紧张的样子。;
-changeBg:新对话.png;
-:叮咚，月饼出炉了。他们开心地品尝着美味的月饼，这时有一只手伸向了包着失忆药水的月饼.....;
-changeBg:月饼场景描述.png -transform={"blur":30};
-choose:是周冠宇:zhou吃了失忆月饼.txt|是Oscar！:Oscar吃了失忆月饼.txt;

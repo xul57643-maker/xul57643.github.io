@@ -1,4 +1,0 @@
-
-zhou:抱歉Oscar....我想不起来过去的事情了，我们还是分开冷静一段时间吧.....等我想起来会给你答复的....;
-intro:太遗憾了，Oscar同学下次记得看清楚药水的名字.....也许未来等zhou想起来还会有机会的.... -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
-end;
