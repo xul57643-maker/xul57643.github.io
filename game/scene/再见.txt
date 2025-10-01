@@ -1,0 +1,4 @@
+
+:周冠宇转身从门口离开，还有些不舍的回头看着Oscar。Oscar虽然有些心软，但是还是没有挽留...;
+intro:天哪Oscar...迷情剂的正确说明书其实是会爱上自己内心深处最爱的人呀。等药效过去快解开误会吧.... -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+end;

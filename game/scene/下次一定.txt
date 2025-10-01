@@ -1,0 +1,3 @@
+
+intro:太过于犹豫可不是好习惯，喜欢要及时说呀Oscar同学，期待你未来能表白成功吧~ -hold -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+end;
